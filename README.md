@@ -93,16 +93,20 @@ drishti-crime-intel/
 │   ├── PROTOTYPE_BRIEF.md     ← one-page brief for judges
 │   ├── ARCHITECTURE.md        ← system design, data model, flows
 │   └── SUBMISSION.md          ← hack2skill submission-template content
-├── web/                       ← React (Vite) SPA — Web Client Hosting     [scaffold]
+├── DEPLOY.md                  ← Catalyst deployment guide
+├── catalyst.json              ← Catalyst project manifest                  ✅ live
+├── client/                    ← web app → Web Client Hosting              ✅ live
+│   ├── index.html · styles.css · app.js
+│   └── client-package.json
+├── functions/
+│   └── drishti_api/           ← Advanced I/O mock API → /server/drishti_api ✅ live
 ├── mobile/                    ← React Native app (iOS + Android)          [scaffold]
-├── functions/                 ← Catalyst Serverless Functions             [scaffold]
-├── appsail/                   ← Conversational engine + PDF service        [scaffold]
+├── appsail/                   ← full conversational engine + PDF service   [scaffold]
 ├── ml/                        ← QuickML pipeline definitions & notebooks   [scaffold]
-├── data/                      ← Synthetic sample crime dataset + schema    [scaffold]
-└── catalyst.json              ← Catalyst project manifest                  [scaffold]
+└── data/                      ← Synthetic sample crime dataset + schema    [scaffold]
 ```
 
-> **Note:** This repository currently contains the **submission documentation package**. Application code directories are marked `[scaffold]` and are populated during the build phase.
+> **Status:** The **web client** and a **Catalyst Serverless Function** (mock intelligence API) are built and deployable today — see [`DEPLOY.md`](DEPLOY.md). The chatbot answers network, trend/hotspot, offender-risk, and FIR-lookup queries over synthetic data, in English and Kannada, with an evidence trail on every response. Directories marked `[scaffold]` (mobile app, full AppSail engine, ML pipelines) are the next build phase.
 
 ---
 
